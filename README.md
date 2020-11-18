@@ -13,12 +13,17 @@ The database consists 2 tables:
 
 ## How I collected information
 **Step 1:** From Tiki homepage, we got 16 main categories.
+
 **Step 2:** After getting 16 main categories, our code using recursion will go to each category, get its sub-categories in each tier until it reaches the last tier and automatically saved in sqlite database.
 We got 3,195 categories in total which are saved in ```category``` table.
+
 **Step 3:**
 Get URLs of the last layer of sub-category by joining 2 tables and get only the unmatched rows.
+
 **Step 4:**
 Go to each URL in the last layer to get product information and automatically save in ```product``` table.
 
 ## Issues
-When scraping product information, tiki shows only 21 pages for each category.
+When scraping product information, tiki shows only 21 pages for each category so I could not scrape all products in a category which has more than 1,092 products.
+
+
